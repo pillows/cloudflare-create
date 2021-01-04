@@ -79,7 +79,7 @@ function create_cf_dns_record() {
     _log "Failed to create DNS record (ZoneID: $zone_id; Domain: $domain)"
   fi
 
-  pretty_print "$result"
+  #pretty_print "$result"
 }
 
 function delete_cf_dns_record() {
