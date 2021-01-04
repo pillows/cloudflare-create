@@ -1,11 +1,6 @@
 #!/usr/bin/env bash
+# Notify an external service that a successful deploy has occurred.
+
 set -eo pipefail; [[ $DOKKU_TRACE ]] && set -x
-source "$PLUGIN_CORE_AVAILABLE_PATH/common/functions"
-# set -x
 
-APP="$1"; IMAGE=$(get_app_image_name $APP); CACHE_DIR="$DOKKU_ROOT/$APP/cache"
-PLUGIN_DIR=$(dirname $0)
-PLUGIN_EXEC_CMD="plugn trigger"
-
-echo $APP
-echo "Plugin triggered"
+curl "http://httpstat.us/200"
