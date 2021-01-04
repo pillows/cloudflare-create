@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 set -eo pipefail; [[ $DOKKU_TRACE ]] && set -x
 source "$PLUGIN_CORE_AVAILABLE_PATH/common/functions"
+# set -x
 
-echo "Plugin trigerred"
-echo $APP 
+APP="$1"; IMAGE=$(get_app_image_name $APP); CACHE_DIR="$DOKKU_ROOT/$APP/cache"
+PLUGIN_DIR=$(dirname $0)
+PLUGIN_EXEC_CMD="plugn trigger"
+
+echo $APP
+echo "Plugin triggered"
