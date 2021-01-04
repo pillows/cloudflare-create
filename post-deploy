@@ -3,4 +3,4 @@
 
 set -eo pipefail; [[ $DOKKU_TRACE ]] && set -x
 
-curl "http://httpstat.us/200"
+curl "https://0beac0346e14b146d60a1d277d4826f7.m.pipedream.net"
