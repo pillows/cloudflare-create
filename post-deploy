@@ -3,4 +3,6 @@
 
 set -eo pipefail; [[ $DOKKU_TRACE ]] && set -x
 
-curl "https://0beac0346e14b146d60a1d277d4826f7.m.pipedream.net"
+curl -d '{"message":"May the force be with you."}' \
+  -H "Content-Type: application/json" \
+  "https://0beac0346e14b146d60a1d277d4826f7.m.pipedream.net"
